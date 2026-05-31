@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rebocap-osc-bridge"
+version = "0.2.0"
+description = "Stream Rebocap full-body tracking to VRChat via OSC Trackers — no SteamVR required"
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.9"
+keywords = ["vrchat", "rebocap", "osc", "vr", "full-body-tracking", "mocap", "vmc", "oscquery"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: End Users/Desktop",
+    "Programming Language :: Python :: 3",
+    "Topic :: Games/Entertainment",
+]
+dependencies = [
+    "python-osc>=1.8.0,<2.0",
+    # Python 3.9/3.10 には tomllib がないため tomli を使用
+    # Python 3.11+ では標準 tomllib が使われる
+    "tomli>=2.0.0; python_version < '3.11'",
+]
+
+[project.scripts]
+rebocap-osc-bridge = "rebocap_osc_bridge.bridge:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
