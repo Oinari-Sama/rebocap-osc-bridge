@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rebocap-osc-bridge"
-version = "0.3.0"
+version = "0.4.0"
 description = "Experimental Rebocap SDK v2 to VRChat OSC bridge with approximate FK"
 readme = "README.md"
 requires-python = ">=3.9,<3.13"
@@ -30,9 +30,13 @@ dev = [
     "pytest>=7",
     "tomli>=2.0; python_version < '3.11'",
 ]
+openvr = [
+    "openvr>=2.12",
+]
 
 [project.scripts]
 rebocap-osc-bridge = "rebocap_osc_bridge.bridge:main"
+rebocap-openvr-osc-bridge = "rebocap_osc_bridge.openvr_bridge:main"
 
 [tool.setuptools.packages.find]
 where = ["."]
