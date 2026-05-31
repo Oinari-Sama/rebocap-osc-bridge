@@ -1,5 +1,13 @@
 # rebocap-osc-bridge
 
+> [!WARNING]
+> **Development status: not working with the official Rebocap Python SDK yet.**
+>
+> The official Python SDK currently exposes only the pelvis translation and
+> 24 bone rotations. This project still needs forward kinematics or another
+> verified position source before it can send usable VRChat OSC Tracker poses.
+> Do not use this preview for live tracking.
+
 **Stream Rebocap full-body tracking directly into VRChat — no SteamVR required.**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
